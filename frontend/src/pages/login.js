@@ -25,8 +25,6 @@ const Login = () => {
             const decodedToken = jwtDecode(data.token);
             const userId = decodedToken.id;  // Assuming 'id' is the user ID in the decoded token
     
-            // Log the response for debugging
-            console.log("Login successful:", data);
     
             // Store the token and user ID in sessionStorage
             sessionStorage.setItem('token', data.token);
