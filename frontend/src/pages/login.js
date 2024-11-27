@@ -31,7 +31,10 @@ const Login = () => {
             sessionStorage.setItem('userId', userId);
     
             // Navigate to the dashboard after successful login
-            navigate('/dashboard');
+            // navigate('/dashboard');
+            setTimeout(() => {
+                navigate('/dashboard');
+            }, 1000);
         } catch (error) {
             console.error("Login failed", error);
             alert('Login failed, please check your credentials.');
