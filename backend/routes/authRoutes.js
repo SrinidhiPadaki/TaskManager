@@ -40,7 +40,7 @@ router.get('/google/callback',
         try {
             const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
             const userId = req.user._id; // Include userId in the redirect
-            res.redirect(`http://localhost:3000/auth/google/callback?token=${token}&userId=${userId}`);
+            res.redirect(`https://adorable-marigold-62ed3c.netlify.app/auth/google/callback?token=${token}&userId=${userId}`);
         } catch (error) {
             console.error('Error during Google callback:', error);
         }
