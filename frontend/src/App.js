@@ -9,20 +9,20 @@ import TaskView from './components/TaskView';
 import HandleGoogleRedirect from './pages/HandleGoogleRedirect';
 
 const App = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(!!sessionStorage.getItem('token'));
-    const [loading, setLoading] = useState(true); 
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [loading, setLoading] = useState(true); // Add a loading state to show until authentication is verified
 
     useEffect(() => {
-        
+        // Check if the user has a valid token and userId in localStorage
         const token = sessionStorage.getItem('token');
         const userId = sessionStorage.getItem('userId');
         if (token && userId) {
-            setIsAuthenticated(!!sessionStorage.getItem('token')); 
+            setIsAuthenticated(true); // User is authenticated
         } else {
-            setIsAuthenticated(!!sessionStorage.getItem('token')); 
+            setIsAuthenticated(false); // User is not authenticated
         }
-        setLoading(false);
-    }, []);
+        setLoading(false); // Set loading to false once the check is complete
+    }, []);
 
    
     if (loading) {

@@ -62,7 +62,7 @@ const Login = () => {
             <div style={{ marginTop: '20px', textAlign: 'center' }}>
                 <h3>Or Login with Google</h3>
                 <a
-                    href="http://localhost:5000/api/auth/google" // Replace with your back-end's Google login route
+                    href="https://taskmanager-cfr7.onrender.com/api/auth/google" // Replace with your back-end's Google login route
                     className="google-login-button"
                 >
                     Login with Google

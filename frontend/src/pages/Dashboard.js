@@ -43,7 +43,6 @@ const Dashboard = () => {
 
             try {
                 const { data } = await createTask(taskData);
-                console.log("Task created successfully:", data);
                 setTasks([...tasks, data]);  // Add the new task to the state
                 setTitle('');
                 setDescription('');
