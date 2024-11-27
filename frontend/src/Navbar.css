@@ -1,0 +1,46 @@
+/* Navbar Layout */
+.navbar-container {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar-container .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-container .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-container .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Add a logout button */
+.navbar-container button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar-container button:hover {
+    background-color: white;
+    color: #007BFF;
+}

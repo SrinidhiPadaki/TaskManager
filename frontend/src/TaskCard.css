@@ -1,0 +1,39 @@
+/* Task Card Styling */
+.task-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Task Card */
+.task-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Title */
+.task-card h3 {
+    font-size: 18px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* Task Description */
+.task-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Task Status */
+.task-card .status {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
