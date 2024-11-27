@@ -216,21 +216,21 @@ import HandleGoogleRedirect from './pages/HandleGoogleRedirect';
 
 const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(!!sessionStorage.getItem('token'));
-    const [loading, setLoading] = useState(true); // Add a loading state to show until authentication is verified
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        // Check if the user has a valid token and userId in localStorage
+        
         const token = sessionStorage.getItem('token');
         const userId = sessionStorage.getItem('userId');
         if (token && userId) {
-            setIsAuthenticated(!!sessionStorage.getItem('token')); // User is authenticated
+            setIsAuthenticated(!!sessionStorage.getItem('token')); 
         } else {
-            setIsAuthenticated(!!sessionStorage.getItem('token')); // User is not authenticated
+            setIsAuthenticated(!!sessionStorage.getItem('token')); 
         }
-        setLoading(false); // Set loading to false once the check is complete
+        setLoading(false);
     }, []);
 
-    // If still loading, show a loading screen
+   
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -243,7 +243,7 @@ const App = () => {
                     <Route path="/register" element={<Register />} />
                     <Route
                         path="/auth/google/callback"
-                        element={<HandleGoogleRedirect />} // Handle Google redirect
+                        element={<HandleGoogleRedirect />} 
                     />
                     <Route
                         path="/dashboard"
